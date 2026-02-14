@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Paper Scissors</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <main class="app">
+      <header class="hero">
+        <p class="eyebrow">Arena Mode</p>
+        <h1>Stone Paper Scissors</h1>
+        <p class="subtitle">Pick a move, own the round, and outplay the machine.</p>
+      </header>
+
+      <section class="choices" aria-label="Move choices">
+        <button class="choice" id="rock" type="button" aria-label="Choose rock">
+          <img src="./images/rock.png" alt="Rock"/>
+          <span class="choice-name">Rock</span>
+        </button>
+        <button class="choice" id="paper" type="button" aria-label="Choose paper">
+          <img src="./images/paper.png" alt="Paper"/>
+          <span class="choice-name">Paper</span>
+        </button>
+        <button class="choice" id="scissors" type="button" aria-label="Choose scissors">
+          <img src="./images/scissors.png" alt="Scissors"/>
+          <span class="choice-name">Scissors</span>
+        </button>
+      </section>
+
+      <section class="score-board" aria-label="Score board">
+        <div class="score user-panel">
+          <p class="score-title">You</p>
+          <p class="score-value" id="user-score">0</p>
+        </div>
+        <div class="versus" aria-hidden="true">VS</div>
+        <div class="score cpu-panel">
+          <p class="score-title">Computer</p>
+          <p class="score-value" id="comp-score">0</p>
+        </div>
+      </section>
+
+      <div class="controls" aria-label="Round controls">
+        <button class="control-btn control-btn--solid" id="reset-btn" type="button">
+          Reset Score
+        </button>
+        <button
+          class="control-btn control-btn--toggle"
+          id="sound-btn"
+          type="button"
+          aria-pressed="true"
+        >
+          Sound: On
+        </button>
+      </div>
+
+      <div class="msg-container" aria-live="polite">
+        <p id="msg">Play your move</p>
+      </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
